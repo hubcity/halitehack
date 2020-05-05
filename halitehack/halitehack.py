@@ -8,6 +8,7 @@ import kaggle_environments.envs.halite.halite as original_halite
 ignore_action = "INFO"
 specification = original_halite.specification.copy()
 specification["action"]["additionalProperties"]["enum"].append(ignore_action)
+specification["name"] = "halitehack"
 
 def interpreter(state, env):
     for agent in state:
