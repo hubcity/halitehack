@@ -5,12 +5,16 @@ from zipfile import ZipFile
 
 import kaggle_environments.envs.halite.halite as original_halite
 
+version = "0.2"
 ignore_action = "INFO"
 specification = original_halite.specification.copy()
 specification["action"]["additionalProperties"]["enum"].append(ignore_action)
 specification["name"] = "halitehack"
+specification["version"] = f'halite: {specification["version"]} halitehack: {version}'
 
 def interpreter(state, env):
+    for agent in state:
+        agent.info = ""
     for agent in state:
         actions = agent.action
         if actions is not None:
