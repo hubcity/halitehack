@@ -1,6 +1,6 @@
 # halitehack
 
-# With the release of kaggle_environments 0.3, this project is now obsolete
+# Now that kaggle has released kaggle_environments 0.3 this project is obsolete
 
 Kaggle has released a new version of [Halite by Two Sigma](https://www.kaggle.com/c/halite)
 
